@@ -1,15 +1,15 @@
-class Wrapper<ObjectType> {
+class Wrap<ObjectType> {
     private ObjectType m_data;
 
-    public Wrapper(ObjectType data) {
+    public Wrap(ObjectType data) {
         m_data = data;
     }
 
-    public void swap (Wrapper swapObject) {
+    public void swap (Wrap swapObject) {
         SwapObjects(this, swapObject);
     }
 
-    public static void SwapObjects (Wrapper firstObject, Wrapper secondObject) {
+    public static void SwapObjects (Wrap firstObject, Wrap secondObject) {
         if (firstObject.GetData().getClass() == secondObject.GetData().getClass()) {
             Object dataSaveObject = secondObject.m_data;
             secondObject.m_data = firstObject.m_data;
